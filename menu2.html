@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Café Gold</h1>
+        <p>Drink, Sip, and Crooozzzz</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#coffee">Coffee</a></li>
+            <li><a href="#tea">Tea</a></li>
+            <li><a href="#snacks">Snacks</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+        </ul>
+    </nav>
+
+    <!-- Coffee Section with Add to Cart buttons -->
+    <section id="coffee" class="menu-section">
+        <h2>Coffee</h2>
+        <ul class="menu-list">
+            <li><strong>Espresso</strong> - $3.00 <button onclick="addToCart('Espresso', 3.00)">Add to Cart</button></li>
+            <li><strong>Cappuccino</strong> - $4.50 <button onclick="addToCart('Cappuccino', 4.50)">Add to Cart</button></li>
+            <li><strong>Latte</strong> - $4.00 <button onclick="addToCart('Latte', 4.00)">Add to Cart</button></li>
+            <li><strong>Americano</strong> - $3.50 <button onclick="addToCart('Americano', 3.50)">Add to Cart</button></li>
+            <li><strong>Mocha</strong> - $4.75 <button onclick="addToCart('Mocha', 4.75)">Add to Cart</button></li>
+        </ul>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart-section">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="placeOrder()">Place Order</button>
+    </section>
+
+    <!-- Order Form -->
+    <section id="order-form" class="menu-section">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="order">Your Order:</label>
+            <textarea id="order" name="order" rows="4" readonly></textarea><br>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Café Gold. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+/* =====================================================
+   Professional Resume Styling - Optimized for Job Applications
+   ===================================================== */
+
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef3 100%);
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header Section - Professional & Clean */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+#MainMenu h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 15px 0 10px;
+    letter-spacing: 1px;
+    color: white;
+    text-transform: uppercase;
+}
+
+#MainMenu #designation {
+    font-size: 1.3em;
+    color: #e8f4f8;
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+#MainMenu p {
+    font-size: 1em;
+    margin: 8px 0;
+    color: #e8f4f8;
+}
+
+#MainMenu p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+    padding: 2px 4px;
+}
+
+#MainMenu p a:hover {
+    border-bottom: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+/* Section Styling */
+section {
+    background: white;
+    padding: 35px 45px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+h2 {
+    font-size: 1.8em;
+    color: #1e3c72;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #2a5298;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: "▸";
+    margin-right: 10px;
+    color: #2a5298;
+    font-size: 0.9em;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+/* Experience & Project Divs */
+div.experience-item,
+section > div {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e0e6ed;
+}
+
+div.experience-item:last-child,
+section > div:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+section > div > p {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+/* Lists - Clean & Professional */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    margin: 10px 0;
+    padding: 14px 20px 14px 45px;
+    border-left: 4px solid #2a5298;
+    border-radius: 6px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 0.98em;
+    line-height: 1.7;
+}
+
+li:hover {
+    transform: translateX(5px);
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    box-shadow: 0 4px 12px rgba(42, 82, 152, 0.15);
+    border-left-color: #1e3c72;
+}
+
+li::before {
+    content: "▸";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #2a5298;
+    font-weight: bold;
+}
+
+li strong {
+    color: #1e3c72;
+    font-weight: 600;
+}
+
+/* Core Competencies Section - Special Styling */
+section:nth-child(3) li {
+    background: linear-gradient(135deg, #fff9f0 0%, #ffe9d6 100%);
+    border-left-color: #e67e22;
+}
+
+section:nth-child(3) li::before {
+    content: "✓";
+    color: #e67e22;
+}
+
+section:nth-child(3) li:hover {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+}
+
+/* Skills Section - Grid Layout */
+#Skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+#Skills li {
+    text-align: center;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    border-left: none;
+    box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+#Skills li::before {
+    content: "";
+    display: none;
+}
+
+#Skills li:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Links */
+a {
+    color: #2a5298;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+/* Professional Summary Section */
+section:first-of-type p {
+    font-size: 1.05em;
+    line-height: 1.9;
+    color: #34495e;
+    text-align: justify;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+}
+
+/* Certifications Section Styling */
+section:nth-last-child(2) li {
+    background: linear-gradient(135deg, #e8f8f5 0%, #d1f2eb 100%);
+    border-left-color: #16a085;
+    font-size: 1.05em;
+}
+
+section:nth-last-child(2) li::before {
+    content: "";
+    display: none;
+}
+
+section:nth-last-child(2) li:hover {
+    background: linear-gradient(135deg, #d1f2eb 0%, #a3e4d7 100%);
+}
+
+/* Education Section */
+section:last-child h3 {
+    color: #2c3e50;
+    margin-top: 15px;
+}
+
+section:last-child p {
+    color: #7f8c8d;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+/* Project Links Enhancement */
+section:nth-child(6) a {
+    display: inline-block;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+section:nth-child(6) a:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+    text-decoration: none;
+}
+
+/* Print-Friendly Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    section {
+        box-shadow: none;
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+    
+    header {
+        background: #1e3c72 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    li:hover,
+    section:hover {
+        transform: none;
+    }
+    
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+    
+    h2::before {
+        display: none;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    header,
+    section {
+        padding: 25px 20px;
+    }
+    
+    #MainMenu h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    #Skills ul {
+        grid-template-columns: 1fr;
+    }
+    
+    li {
+        padding-left: 40px;
+    }
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Additional Professional Touches */
+strong {
+    color: #2c3e50;
+}
+
+/* Highlight Numbers and Metrics */
+li:contains('%'),
+li:contains('days'),
+li:contains('+') {
+    font-weight: 500;
+}
